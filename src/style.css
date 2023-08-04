@@ -1,3 +1,16 @@
+a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-top: 200px;
+  text-align: center;
+  font-size: 14px;
+  transition: all 150ms ease-in-out;
+  text-shadow: 0px 3px 10px rgba(47, 29, 5, 0.2);
+}
+a:hover {
+  color: #4d4d4d;
+}
 body {
   background-image: url(../img/clear-weather-bg.png);
   background-repeat: no-repeat;
