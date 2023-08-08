@@ -1,19 +1,6 @@
 //Get Day and Time -- working
 function formatDate(date) {
-  var hours = date.getHours();
-
-  // if (hours > 14) {
-  //   console.log("it's night.");
-
-  //   let backgroundImage = document.querySelector("body");
-  //   backgroundImage.setAttribute(
-  //     "style",
-  //     "background: url(img/night-weather-bg.png)"
-  //   );
-  //   backgroundImage.setAttribute("style", "background-repeat: no-repeat");
-  //   backgroundImage.setAttribute("style", "background-size: cover");
-  //   backgroundImage.setAttribute("style", "background-attachment: fixed");
-  // }
+  let hours = date.getHours();
 
   if (hours < 10) {
     hours = `0${hours}`;
