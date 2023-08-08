@@ -90,10 +90,11 @@ function searchLocation(position) {
 function getGeoLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
+  toFahrenheit();
 }
 //Celsius and Fahrenheit Converter -- active class not working
 function toCelsius() {
-  if (isFahrenheit) {
+  if (isCelsius === false) {
     // Convert Fahrenheit to Celsius
     const celsiusTemp =
       ((parseFloat(temperatureSpan.textContent) - 32) * 5) / 9;
@@ -103,6 +104,7 @@ function toCelsius() {
     const fahrenheitButton = document.getElementById("fahrenheit");
     fahrenheitButton.classList.remove("active");
     celsiusButton.classList.add("active");
+    isCelsius = true;
     isFahrenheit = false;
   }
 }
@@ -118,6 +120,7 @@ function toFahrenheit() {
     fahrenheitButton.classList.add("active");
     celsiusButton.classList.remove("active");
     isFahrenheit = true;
+    isCelsius = false;
   }
 }
 //Update Forecast Days
@@ -177,6 +180,7 @@ let currentLocationButton = document.querySelector("#location-button");
 currentLocationButton.addEventListener("click", getGeoLocation);
 
 let isFahrenheit = true; // variable to keep track of the current unit
+let isCelsius = false;
 const temperatureSpan = document.getElementById("temperature");
 
 const fahrenheitButton = document.getElementById("fahrenheit");
