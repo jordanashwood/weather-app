@@ -1,13 +1,29 @@
 //Get Day and Time -- working
 function formatDate(date) {
   var hours = date.getHours();
+
+  // if (hours > 14) {
+  //   console.log("it's night.");
+
+  //   let backgroundImage = document.querySelector("body");
+  //   backgroundImage.setAttribute(
+  //     "style",
+  //     "background: url(img/night-weather-bg.png)"
+  //   );
+  //   backgroundImage.setAttribute("style", "background-repeat: no-repeat");
+  //   backgroundImage.setAttribute("style", "background-size: cover");
+  //   backgroundImage.setAttribute("style", "background-attachment: fixed");
+  // }
+
   if (hours < 10) {
     hours = `0${hours}`;
   }
+
   var minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+
   var dayIndex = date.getDay();
   var days = [
     "Sunday",
@@ -27,6 +43,7 @@ function formatDay(timestamp) {
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return days[day];
 }
+
 //Weather Display
 function displayWeather(response) {
   document.querySelector("#city-name").innerHTML = response.data.name;
@@ -89,7 +106,6 @@ function toCelsius() {
     isFahrenheit = false;
   }
 }
-// } else {
 function toFahrenheit() {
   // Convert Celsius to Fahrenheit
   if (isFahrenheit === false) {

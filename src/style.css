@@ -12,7 +12,7 @@ a:hover {
   color: #4d4d4d;
 }
 body {
-  background-image: url(../img/clear-weather-bg.png);
+  background: url(../img/clear-weather-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -44,10 +44,6 @@ sup {
   position: relative;
   top: -15px;
   padding-left: 2px;
-}
-.active {
-  background-color: #e48b05;
-  color: black;
 }
 .big-icon {
   color: #fec83a;
@@ -112,6 +108,9 @@ sup {
 .row {
   gap: 5px;
 }
+.scale-buttons .active {
+  background-color: #e48b05;
+}
 .scale-buttons {
   gap: 5px;
   display: inline-flex;
@@ -173,7 +172,7 @@ sup {
   margin-top: -50px;
 }
 .weather-container {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
   min-width: fit-content;
   border-radius: 10px;
   padding: 0 50px;
