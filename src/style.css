@@ -11,14 +11,6 @@ a {
 a:hover {
   color: #4d4d4d;
 }
-body {
-  background: url(../img/clear-weather-bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
-  margin: 50px 100px;
-}
 h1,
 h2 {
   color: #4d4d4d;
@@ -52,14 +44,6 @@ sup {
   top: 30px;
   left: 40px;
 }
-body .body-night {
-  background: url(../img/night-weather-bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
-  margin: 50px 100px;
-}
 .city {
   margin-top: 30px;
   line-height: 0.75px;
@@ -88,8 +72,16 @@ body .body-night {
   background-color: #fdbc18;
   box-shadow: 0px 3px 10px rgba(47, 29, 5, 0.2);
 }
-.weather-forecast {
-  margin: 30px -38px 0px -38px;
+.day-theme {
+  background: url(../img/clear-weather-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  margin: 50px 100px;
+}
+.day-theme #city-name {
+  color: #4d4d4d;
 }
 .forecast-date {
   font-weight: 600;
@@ -112,6 +104,64 @@ body .body-night {
 }
 #location-button {
   margin-left: 10px;
+}
+.night-theme {
+  background: url(../img/night-weather-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  margin: 50px 100px;
+}
+.night-theme .weather-container {
+  background-color: rgb(22 18 48 / 53%);
+}
+.night-theme h1,
+h2 {
+  color: #ffffff;
+}
+.night-theme p {
+  color: #d8d8d8e3;
+}
+.night-theme #temperature {
+  color: #100a36;
+}
+.night-theme #date {
+  background-color: #2e3c88;
+}
+.night-theme .day {
+  background-color: #2e3c88;
+}
+.night-theme .day:hover {
+  background-color: #12193c;
+}
+.night-theme #search-city {
+  border-radius: 30px;
+  border: solid 1px white;
+  background-color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  margin: 10px 0;
+  width: 91%;
+  min-width: fit-content;
+}
+.night-theme #search-city:focus {
+  outline: 2px solid #4b71ec;
+}
+.night-theme .scale-buttons .active {
+  background-color: #4b71ec;
+}
+.night-theme .scale-buttons button {
+  background-color: black;
+  color: white;
+}
+.night-theme .scale-buttons button:hover {
+  background-color: #2c2c2c;
+}
+.night-theme #search-button {
+  background-color: #4b71ec;
+}
+.night-theme #location-button {
+  background-color: #4b71ec;
 }
 .row {
   gap: 5px;
@@ -184,6 +234,9 @@ body .body-night {
   min-width: fit-content;
   border-radius: 10px;
   padding: 0 50px;
+}
+.weather-forecast {
+  margin: 30px -38px 0px -38px;
 }
 #weather-icon {
   float: right;

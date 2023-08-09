@@ -154,11 +154,28 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 
+function changeTheme(date) {
+  let hour = date.getHours();
+  let body = document.querySelector("body");
+
+  if (hour >= 17) {
+    body.classList.add("night-theme");
+    body.classList.remove("day-theme");
+
+    console.log(hour);
+  } else {
+    body.classList.remove("night-theme");
+    body.classList.add("day-theme");
+  }
+}
+
 searchCity("Charleston");
 
 var dateElement = document.querySelector("#date");
 var currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
+
+changeTheme(currentTime);
 
 let searchForm = document.querySelector("#city-search-form");
 searchForm.addEventListener("submit", handleSubmit);
